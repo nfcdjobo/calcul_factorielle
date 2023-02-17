@@ -25,4 +25,14 @@ function ecouteur() {
     let argu = parseInt(document.getElementById("nombre").value);
     calcul_Factorielle(argu);
 }
+
+function restaurer() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("erreur").textContent = "";
+    document.getElementById("erreur").style.color="red";
+    document.getElementById("message").textContent = "";
+    document.getElementById("resul").textContent = "";
+    document.getElementById("resultat").value = "";
+}
 document.getElementById("nombre").addEventListener("input", ecouteur);
+document.getElementById("restaure").addEventListener("click", restaurer);
